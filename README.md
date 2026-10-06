@@ -85,6 +85,9 @@ Pilih menu (1/2/3):
         print("Data Tidak boleh kosong")
   ```
 
+### Built With
+<img src="https://skillicons.dev/icons?i=py,vscode,github" />
+
 ## Output
-<img width="480" height="483" alt="Screenshot 2026-10-06 210728" src="https://github.com/user-attachments/assets/b8bd0160-9f3a-4a4f-9273-cfc2fde99bfa" />
+<img width="480" height="483" alt="Screenshot 2026-10-06 210728" src="https://github.com/user-attachments/assets/fa4727ce-8172-4afd-8a07-20fe4001f9f6" />
 
