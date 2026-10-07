@@ -1,10 +1,10 @@
 # Sistem Pencatatan Nilai Mahasiswa
 
-Program berbasis terminal yang dibuat menggunakan Python untuk membaca, menampilkan, dan menambahkan data nilai mahasiswa. Data disimpan dalam file **CSV**, sehingga dapat digunakan kembali setelah program ditutup.
+Program berbasis terminal yang dibuat menggunakan Python untuk membaca, menampilkan, dan menambahkan data nilai mahasiswa. Data disimpan dalam file **CSV**, sehingga dapat digunakan kembali setelah program ditutup
 
 ## Fitur
 
-- **Menampilkan data mahasiswa** dari file `nilai.csv` menggunakan modul bawaan `csv`. Setiap data ditampilkan dengan nomor urut, nama, NIM, mata kuliah, dan nilai.
+- **Menampilkan data mahasiswa** dari file `nilai.csv` menggunakan modul bawaan `csv`. Setiap data ditampilkan dengan nomor urut, nama, NIM, mata kuliah, dan nilai
 
   ```python
   with open(nmfilecsv) as csv_file:
@@ -13,14 +13,14 @@ Program berbasis terminal yang dibuat menggunakan Python untuk membaca, menampil
           datanilai.append(rw)
   ```
 
-- **Menampilkan pesan saat data masih kosong.** Baris pertama CSV digunakan sebagai header. Jika file hanya berisi header, program memberi tahu bahwa belum ada data yang terdefinisi.
+- **Menampilkan pesan saat data masih kosong.** Baris pertama CSV digunakan sebagai header. Jika file hanya berisi header, program memberi tahu bahwa belum ada data yang terdefinisi
 
   ```python
   if len(datanilai) <= 1:
       print("belum ada data yang terdefinisi")
   ```
 
-- **Menambahkan data nilai mahasiswa** melalui input nama, NIM, mata kuliah, dan nilai.
+- **Menambahkan data nilai mahasiswa** melalui input nama, NIM, mata kuliah, dan nilai
 
   ```python
   nama = input("Masukkan Nama : ")
@@ -29,7 +29,7 @@ Program berbasis terminal yang dibuat menggunakan Python untuk membaca, menampil
   nilai = input("Masukkan nilai (0-100) : ")
   ```
 
-- **Memvalidasi input sebelum penyimpanan.** Nama, NIM, dan mata kuliah tidak boleh berupa string kosong. Nilai harus berupa digit dan tidak melebihi 100; input negatif atau desimal ditolak oleh pemeriksaan `isdigit()`.
+- **Memvalidasi input sebelum penyimpanan.** Nama, NIM, dan mata kuliah tidak boleh berupa string kosong. Nilai harus berupa digit dan tidak melebihi 100 `isdigit()`
 
   ```python
   if nama == "" or nim == "" or Matkul == "":
@@ -40,7 +40,7 @@ Program berbasis terminal yang dibuat menggunakan Python untuk membaca, menampil
       print("Nilai maksimal 100")
   ```
 
-- **Menyimpan data secara permanen** menggunakan mode append (`"a"`). Data baru ditambahkan di akhir file tanpa menimpa data sebelumnya.
+- **Menyimpan data secara permanen** menggunakan mode append (`"a"`). Data baru ditambahkan di akhir file tanpa menimpa data sebelumnya
 
   ```python
   with open(nmfilecsv, mode="a", newline="") as csv_file:
@@ -53,7 +53,7 @@ Program berbasis terminal yang dibuat menggunakan Python untuk membaca, menampil
       writer.writerow([nama, nim, Matkul, nilai])
   ```
 
-- **Menu interaktif** yang terus ditampilkan hingga pengguna memilih keluar. Pilihan selain `1`, `2`, atau `3` akan menghasilkan pesan bahwa pilihan tidak valid.
+- **Menu interaktif** yang terus ditampilkan hingga pengguna memilih keluar. Pilihan selain `1`, `2`, atau `3` akan menghasilkan pesan bahwa pilihan tidak valid
 
 ## Menu Program
 
